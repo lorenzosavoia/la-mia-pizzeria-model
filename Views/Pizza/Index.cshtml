@@ -1,0 +1,74 @@
+﻿@using Microsoft.AspNetCore.Html
+@model la_mia_pizzeria_static.Models.ListaPizze;
+@{
+    Layout = "_LayoutPizza";
+}
+
+
+@*<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 text-center">
+            <h1>Pizzeria Da Gennaro</h1>
+        </div>
+        
+        <div class="card col-4 m-2 p-0">
+            <img src="@ViewData["pizza1Img"]" class="card-img-top img-style" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">@ViewData["pizza1"]</h5>
+                <p class="card-text">@ViewData["pizza1Desc"]</p>
+                <p class="card-text">@ViewData["pizza1Price"]</p>
+            </div>
+        </div>
+        
+        <div class="card col-4 m-2 p-0">
+            <img src="@ViewData["pizza2Img"]" class="card-img-top img-style" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">@ViewData["pizza2"]</h5>
+                <p class="card-text">@ViewData["pizza2Desc"]</p>
+                <p class="card-text">@ViewData["pizza2Price"]</p>
+            </div>
+        </div>
+        
+        <div class="card col-4 m-2 p-0">
+            <img src="@ViewData["pizza3Img"]" class="card-img-top img-style" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">@ViewData["pizza3"]</h5>
+                <p class="card-text">@ViewData["pizza3Desc"]</p>
+                <p class="card-text">@ViewData["pizza3Price"]</p>
+            </div>
+        </div>
+        
+        <div class="card col-4 m-2 p-0">
+            <img src="@ViewData["pizza4Img"]" class="card-img-top img-style" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">@ViewData["pizza4"]</h5>
+                <p class="card-text">@ViewData["pizza4Desc"]</p>
+                <p class="card-text">@ViewData["pizza4Price"]</p>
+            </div>
+        </div>
+        
+        <div class="card col-4 m-2 p-0">      
+            <img src="@ViewData["pizza5Img"]" class="card-img-top img-style" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">@ViewData["pizza5"]</h5>
+                <p class="card-text">@ViewData["pizza5Desc"]</p>
+                <p class="card-text">@ViewData["pizza5Price"]</p>
+            </div>
+        </div>
+    </div>
+</div>*@
+<div class="container">
+    <div class="row justify-content-center">
+        @foreach(var pizza in Model.lsPizza)
+        {
+            <div class="card col-4 m-2 p-0">      
+            <img src="@pizza.sImgPath" class="card-img-top img-style" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">@pizza.sName</h5>
+                <p class="card-text">@pizza.sDesc</p>
+                <p class="card-text">@pizza.sPrice</p>
+            </div>
+        </div>
+        }
+    </div>
+</div>
